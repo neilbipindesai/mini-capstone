@@ -1,0 +1,7 @@
+<h1>All products</h1>
+ <% @products.each do |product| %>
+ <h2><%= product.name %></h2>
+ <h3><%= "$" + product.price.to_s %></h3>
+ <img src="<%= product.image %>" />
+ <p><%= product.description %></p>
+<% end %>
