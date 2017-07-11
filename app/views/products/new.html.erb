@@ -1,0 +1,16 @@
+<h1>New recipe</h1>
+<%= form_tag "/products", method: "post" do %>
+ <div>
+   Name: <input type="text" name="form_name">
+ </div>
+<div>
+ Image: <input type="text" name="form_image">
+</div>
+ <div>
+  Price: <input type="text" name="form_price">
+</div>
+<div>
+  Description: <input type="text" name="form_description">
+ </div>
+<input type="submit" value="Create product">
+<% end %>
