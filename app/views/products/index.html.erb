@@ -7,8 +7,11 @@
            <h2><a href="/products/<%= product.id %>"><%= product.name%></a></h2>
           <h3><%= product.name %></h3>
           <img src="<%= product.image %>" alt="">
-           <h4><%= product.price %></h4>
+           <h4>$<%= product.price %></h4>
            <h4><%= product.description %></h4>
+           <h5><%= product.sale_message%></h5>
+           <h6>tax:<%= product.tax%></h6>
+           <h7>Total Price after tax: $<%= product.total%></h7>
         </div>
         </div>
          <% end %>
