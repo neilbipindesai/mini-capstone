@@ -6,5 +6,7 @@ Rails.application.routes.draw do
   get "/products/:id/edit" => "photos#edit"
   patch "/photos/:id" => "photos#update"
   delete "/photos/:id" => "photos#destroy"
+
+  get "/products_search" => "products#search"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

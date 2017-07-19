@@ -1,11 +1,8 @@
-class Product < ApplicationRecord
-  def sale_message
-    if price > 2
-      return "Everyday Value!"
-    else 
-      return "Discount Value!"
-    end
-  end
+class Product < ActiveRecord::Base
+  belongs_to :supplier
+  # def supplier
+  #   return Supplier.find_by(id: supplier_id)
+  # end
 
   def tax
     price * 0.09
@@ -13,5 +10,9 @@ class Product < ApplicationRecord
 
   def total
     price + tax
-end
+  end
+
+  def discounted?
+    price < 100
+  end
 end
